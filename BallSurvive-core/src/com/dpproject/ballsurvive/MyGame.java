@@ -1,17 +1,19 @@
 package com.dpproject.ballsurvive;
 
-import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.dpproject.ballsurvive.gamestates.SplashMenu;
 
-public class MyGame extends ApplicationAdapter {
+public class MyGame extends Game {
 	
-	SpriteBatch batch;
+	public static final String TITLE="Survive BALL";
+	public static final int WIDTH=540, HEIGHT=960;
+	
 	
 	@Override
 	public void create () {
+		setScreen(new SplashMenu());
 	}
 
 	@Override
